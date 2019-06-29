@@ -6,7 +6,7 @@ const {
 } = require('graphql');
 
 const MenteeType = new GraphQLObjectType({
-  name: 'mentor',
+  name: 'mentee',
   fields: () => ({
     id: { type: GraphQLID },
     username: { type: GraphQLString },
