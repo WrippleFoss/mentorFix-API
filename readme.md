@@ -26,7 +26,7 @@ git clone https://github.com/WrippleFoss/mentorFix-API.git
 
 ```js
 cd mentorFix-API
-yarn 
+yarn  or npm i
 ```
 
 ### Run locally
@@ -34,7 +34,7 @@ yarn
 
 ```js
 $ cd mentorFix-API
-$ yarn start
+$ yarn start or npm start
 goto http://localhost:4000
 ```
 
@@ -66,6 +66,13 @@ Join our discord server by clicking on this [link](https://discord.gg/7TahF4D)
 > **MentorFix** has been selected at [GirlScript Summer of Code 2019](https://www.gssoc.tech/)!
 
 ![GirlScript](https://cdn-images-1.medium.com/max/600/1*47hUn6EfnP5hZkHslmUsxQ.jpeg)
+
+
+> **MentorFix** has been featured at [Rails Girls Summer of Code blog](https://railsgirlssummerofcode.org/blog/)
+
+![Rails Girls Summer of Code](https://railsgirlssummerofcode.org/img/press/section-logos/rgsoc-logo_white-red-background.png)
+
+**MentorFix** at [Rails Girls Summer of Code](https://teams.railsgirlssummerofcode.org/projects/252-mentorfix)
 
 ## License
 

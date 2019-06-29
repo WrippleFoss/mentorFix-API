@@ -13,9 +13,9 @@ Follow the command below run locally:
 cd mentorFix-API
 
 
-yarn
+yarn or npm i
 
-yarn start
+yarn start or npm start
 ```
 
 
