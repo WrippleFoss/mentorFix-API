@@ -8,12 +8,12 @@ const addMentor = {
     email: { type: GraphQLString },
     password: { type: GraphQLString }
   },
-  resolve(parent, args) {
+  async resolve(parent, args) {
     let mentor = new mentorModel({
       email: args.email,
       password: args.password
     });
-    return mentor.save();
+    return await mentor.save();
   }
 };
 

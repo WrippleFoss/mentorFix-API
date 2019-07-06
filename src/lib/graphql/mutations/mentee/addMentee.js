@@ -1,6 +1,6 @@
 import { GraphQLString } from 'graphql';
 import menteeType from '../../query/types/mentorType';
-import menteeModel from '../../../database/models/mentor';
+import menteeModel from '../../../database/models/mentee';
 
 const addMentor = {
   type: menteeType,
@@ -8,12 +8,12 @@ const addMentor = {
     email: { type: GraphQLString },
     password: { type: GraphQLString }
   },
-  resolve(parent, args) {
-    let mentor = new mentorModel({
+  async resolve(parent, args) {
+    let mentee = new menteeModel({
       email: args.email,
       password: args.password
     });
-    return mentor.save();
+    return await mentee.save();
   }
 };
 
