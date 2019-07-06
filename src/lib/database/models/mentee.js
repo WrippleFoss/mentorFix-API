@@ -10,10 +10,12 @@ const mentee = new Schema({
   password: { type: String, required: true },
   bio: String,
   location: String,
-  links: Array,
+  public_links: Array,
+  private_links: Array,
   email: { type: String, required: true },
   following: Object, // Type will be changed to array of `mentorTypeID`
-  skills: Object
+  skills: Array,
+  mentors: Array
 });
 
 module.exports = mongoose.model('Mentee', mentee);
