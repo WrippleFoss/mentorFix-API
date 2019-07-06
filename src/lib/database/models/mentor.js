@@ -11,9 +11,10 @@ const mentor = new Schema({
   password: { type: String, required: true },
   bio: String,
   location: String,
-  links: Array, // Type will be changed to `{}_public profile links_`
+  public_links: Array,
+  private_links: Array,
   email: { type: String, required: true },
-  followers: Object, // Type will be changed to `menteeTypeID`
+  followers: Object, // Type will be changed to array of `menteeTypeID`
   expertise: Object
 });
 

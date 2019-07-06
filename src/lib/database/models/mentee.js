@@ -10,9 +10,9 @@ const mentee = new Schema({
   password: { type: String, required: true },
   bio: String,
   location: String,
-  links: Array, // Type will be changed to `{}_public profile links_`
+  links: Array,
   email: { type: String, required: true },
-  followers: Object, // Type will be changed to `menteeTypeID`
+  following: Object, // Type will be changed to array of `mentorTypeID`
   skills: Object
 });
 

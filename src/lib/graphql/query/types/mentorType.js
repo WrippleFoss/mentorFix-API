@@ -16,10 +16,11 @@ const MentorType = new GraphQLObjectType({
     password: { type: GraphQLString },
     bio: { type: GraphQLString },
     location: { type: GraphQLString },
-    links: { type: GraphQLString }, // Type will be changed to `{}_public profile links_`
+    public_links: { type: [GraphQLString] },
+    private_links: { type: [GraphQLString] },
     email: { type: GraphQLString },
-    followers: { type: GraphQLString }, // Type will be changed to `menteeTypeID`
-    expertise: { type: GraphQLString } // Type will be changed to `[]_A list of expertise_`
+    followers: { type: [GraphQLString] }, // Type will be changed to `menteeTypeID`
+    expertise: { type: [GraphQLString] } // Type will be changed to `[]_A list of expertise_`
   })
 });
 
