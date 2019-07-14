@@ -1,8 +1,8 @@
 import { GraphQLString } from 'graphql';
-import menteeType from '../../query/types/mentorType';
+import menteeType from '../../query/types/menteeType';
 import menteeModel from '../../../database/models/mentee';
 
-const addMentor = {
+const addMentee = {
   type: menteeType,
   args: {
     email: { type: GraphQLString },
@@ -17,4 +17,4 @@ const addMentor = {
   }
 };
 
-export default addMentor;
+export default addMentee;

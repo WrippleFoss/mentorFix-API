@@ -5,27 +5,6 @@ const mentorModel = require('../../database/models/mentor');
 
 const { GraphQLObjectType, GraphQLID } = graphql;
 
-const dummy = [
-  {
-    id: '1',
-    admin: 'Abhishek',
-    description: 'Is awesome',
-    link: 'link up'
-  },
-  {
-    id: '2',
-    admin: 'AMit',
-    description: 'Is awesome',
-    link: 'link up'
-  },
-  {
-    id: '3',
-    admin: 'Vijay',
-    description: 'Is awesome',
-    link: 'link up'
-  }
-];
-
 const rootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
@@ -45,7 +24,7 @@ const rootQuery = new GraphQLObjectType({
         id: { type: GraphQLID }
       },
       resolve(parent, args) {
-        return {};
+        return `updated`;
       }
     }
   }

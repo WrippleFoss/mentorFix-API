@@ -13,8 +13,8 @@ const mentor = new Schema({
   location: String,
   links: Array, // Type will be changed to `{}_public profile links_`
   email: { type: String, required: true },
-  followers: Object, // Type will be changed to `menteeTypeID`
-  expertise: Object
+  followers: Array, // Type will be changed to `menteeTypeID`
+  expertise: Array
 });
 
 module.exports = mongoose.model('Mentor', mentor);
