@@ -1,4 +1,4 @@
-import menteeType from '../../query/types/menteeType';
+import menteeType from '../../types/menteeType';
 import menteeModel from '../../../database/models/mentee';
 import { GraphQLString } from 'graphql';
 

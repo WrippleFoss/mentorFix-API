@@ -1,5 +1,5 @@
 import { GraphQLString } from 'graphql';
-import menteeType from '../../query/types/menteeType';
+import menteeType from '../../types/menteeType';
 import menteeModel from '../../../database/models/mentee';
 
 const addMentee = {
@@ -11,7 +11,8 @@ const addMentee = {
   async resolve(parent, args) {
     let mentee = new menteeModel({
       email: args.email,
-      password: args.password
+      password: args.password,
+      verified: false
     });
     return await mentee.save();
   }

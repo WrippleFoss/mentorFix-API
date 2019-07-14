@@ -1,6 +1,6 @@
 const graphql = require('graphql');
-const ConferenceType = require('./types/conferenceType');
-const MentorType = require('./types/mentorType');
+const ConferenceType = require('../types/conferenceType');
+const MentorType = require('../types/mentorType');
 const mentorModel = require('../../database/models/mentor');
 
 const { GraphQLObjectType, GraphQLID } = graphql;
