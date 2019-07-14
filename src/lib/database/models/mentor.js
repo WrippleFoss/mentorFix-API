@@ -11,10 +11,12 @@ const mentor = new Schema({
   password: { type: String, required: true },
   bio: String,
   location: String,
-  links: Array, // Type will be changed to `{}_public profile links_`
+  public_links: Object,
+  private_links: Object,
   email: { type: String, required: true },
-  followers: Object, // Type will be changed to `menteeTypeID`
-  expertise: Object
+  followers: Array, // Type will be changed to array of `menteeTypeID`
+  skillset: Array,
+  certifications: Array
 });
 
 module.exports = mongoose.model('Mentor', mentor);
