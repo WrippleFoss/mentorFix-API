@@ -18,7 +18,7 @@ const LoginResolver = async (parent, args) => {
     { expiresIn: '1h' }
   ); //later needs to have a env based secret
   return {
-    userId: mentee.id,
+    userId: mentee._id,
     token: token,
     tokenExpiration: 1
   };

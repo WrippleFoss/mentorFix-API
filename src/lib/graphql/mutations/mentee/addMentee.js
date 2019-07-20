@@ -9,13 +9,14 @@ const addMentee = {
     email: { type: GraphQLString },
     password: { type: GraphQLString }
   },
-  resolve: async (parent, args) => {
+  resolve: async (parent, args, req) => {
     // let mentee = new menteeModel({
     //   email: args.email,
     //   password: args.password,
     //   verified: false
     // });
     // return await mentee.save();
+
     return menteeModel
       .findOne({ email: args.email })
       .then(user => {
