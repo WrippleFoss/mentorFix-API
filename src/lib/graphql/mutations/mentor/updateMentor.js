@@ -1,4 +1,4 @@
-import mentorType from '../../query/types/mentorType';
+import mentorType from '../../types/mentorType';
 import mentorModel from '../../../database/models/mentor';
 import { GraphQLString } from 'graphql';
 
