@@ -14,6 +14,7 @@ const MenteeType = new GraphQLObjectType({
     verified: { type: GraphQLBoolean },
     password: { type: GraphQLString },
     bio: { type: GraphQLString },
+    role: 'mentee',
     location: { type: GraphQLString },
     links: { type: GraphQLString }, // Type will be changed to `{}_public profile links_`
     email: { type: GraphQLString },
