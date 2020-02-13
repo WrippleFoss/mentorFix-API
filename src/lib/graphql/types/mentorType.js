@@ -24,7 +24,7 @@ const MentorType = new GraphQLObjectType({
     name: { type: GraphQLString },
     // webinars: { type: GraphQLString }, //needs to be reviewed for now
     verified: { type: GraphQLBoolean },
-    // role: { type: GraphQLString },
+    role: { type: GraphQLString },
     password: { type: GraphQLString },
     bio: { type: GraphQLString },
     location: { type: GraphQLString },

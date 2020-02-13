@@ -21,6 +21,7 @@ const addMentee = {
       .then(hashedPassword => {
         const User = new menteeModel({
           email: args.email,
+          role: 'mentee',
           password: hashedPassword
         });
         return User.save();
