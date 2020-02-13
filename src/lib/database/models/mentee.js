@@ -9,6 +9,7 @@ const mentee = new Schema({
   verified: Boolean,
   password: { type: String, required: true },
   bio: String,
+  role: { type: String, required: true },
   location: String,
   links: Array, // Type will be changed to `{}_public profile links_`
   email: { type: String, required: true },

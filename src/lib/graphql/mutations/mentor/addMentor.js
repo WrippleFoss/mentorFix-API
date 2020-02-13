@@ -1,6 +1,7 @@
 import { GraphQLString } from 'graphql';
 import mentorType from '../../types/mentorType';
 import mentorModel from '../../../database/models/mentor';
+import bcrypt from 'bcrypt';
 
 const addMentor = {
   type: mentorType,
@@ -9,11 +10,28 @@ const addMentor = {
     password: { type: GraphQLString }
   },
   async resolve(parent, args) {
-    let mentor = new mentorModel({
-      email: args.email,
-      password: args.password
-    });
-    return await mentor.save();
+    return mentorModel
+      .findOne({ email: args.email })
+      .then(user => {
+        if (user) throw new Error('User already exists');
+
+        return bcrypt.hash(args.password, 12);
+      })
+      .then(hashedPassword => {
+        const User = new mentorModel({
+          email: args.email,
+          role: 'mentor',
+          password: hashedPassword
+        });
+        console.log(User);
+        return User.save();
+      })
+      .then(result => {
+        return { _id: result.id, ...result._doc, password: null };
+      })
+      .catch(err => {
+        throw err;
+      });
   }
 };
 
