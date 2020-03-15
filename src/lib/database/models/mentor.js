@@ -7,7 +7,7 @@ const mentor = new Schema({
   username: String,
   name: String,
   webinars: Array, // Type will be changed to `WebinarTypes`
-  verified: String,
+  verified: Boolean,
   password: { type: String, required: true },
   bio: String,
   role: { type: String, required: true },

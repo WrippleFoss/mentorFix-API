@@ -42,7 +42,8 @@ const rootQuery = new GraphQLObjectType({
       type: LoginType,
       args: {
         email: { type: GraphQLString, required: true },
-        password: { type: GraphQLString, required: true }
+        password: { type: GraphQLString, required: true },
+        role: {type: GraphQLString, required: true}
       },
       resolve: LoginResolver
     }
