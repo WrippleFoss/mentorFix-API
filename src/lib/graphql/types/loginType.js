@@ -10,7 +10,8 @@ const LoginType = new GraphQLObjectType({
   fields: () => ({
     userId: { type: GraphQLID },
     token: { type: GraphQLString },
-    tokenExpiration: { type: GraphQLInt }
+    tokenExpiration: { type: GraphQLInt },
+    userRole: { type: GraphQLString}
   })
 });
 
