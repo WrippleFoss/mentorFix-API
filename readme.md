@@ -35,7 +35,7 @@ yarn  or npm i
 ```js
 $ cd mentorFix-API
 $ yarn start or npm start
-goto http://localhost:4000
+goto http://localhost:4000/api/graphql
 ```
 
 ## Built With
