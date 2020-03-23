@@ -6,7 +6,7 @@ const mentee = new Schema({
   id: String,
   username: String,
   name: String,
-  verified: Boolean,
+  verified: { type: Boolean, default: false },
   password: { type: String, required: true },
   bio: String,
   role: { type: String, required: true },
