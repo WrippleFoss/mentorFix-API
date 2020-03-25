@@ -14,24 +14,18 @@ const LoginResolver = async (parent, args) => {
       if (!isEqual) {
         throw new Error('Password is incorrect');
       }
-      if(mentee.verified){
         const token = jwt.sign(
           { userID: mentee.id, email: mentee.email },
           'supersecretkey',
           { expiresIn: '1h' }
         ); //later needs to have a env based secret
 
-        
         return {
           userId: mentee._id,
           token: token,
           tokenExpiration: 1,
           userRole: args.role
-        };
-      }
-      else{
-        throw new Error('Please verify your email by clicking on a link sent on your email before logging in')
-      }
+        };      
 }
   else if(args.role==='mentor'){
     const mentor = await mentorModel.findOne({ email: args.email });
@@ -42,7 +36,6 @@ const LoginResolver = async (parent, args) => {
     if (!isEqual) {
       throw new Error('Password is incorrect');
     }
-    if(mentor.verified){
       const token = jwt.sign(
         { userID: mentor.id, email: mentor.email },
         'supersecretkey',
@@ -53,11 +46,7 @@ const LoginResolver = async (parent, args) => {
         token: token,
         tokenExpiration: 1,
         userRole: args.role
-      };
-    }
-    else{
-      throw new Error('Please verify your email by clicking on a link sent on your email before logging in')
-    }
+      }
   }
 
   else{
